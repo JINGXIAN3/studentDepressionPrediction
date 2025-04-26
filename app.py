@@ -1,9 +1,20 @@
 import streamlit as st
 import numpy as np
-import pickle  # (if you save your model) 
+import pickle
+import requests
+from io import BytesIO
 
-# Load your trained logistic_model
-# (or you can directly use logistic_model if in the same script)
+# Function to load the model from GitHub
+def load_model_from_github(url):
+    response = requests.get(url)
+    model = pickle.load(BytesIO(response.content))
+    return model
+
+# URL to the pickled model file on GitHub
+model_url = "https://github.com/JINGXIAN3/studentDepressionPrediction/blob/main/logistic_model.pkl"
+
+# Load the trained Logistic Regression model
+logistic_model = load_model_from_github(model_url)
 
 st.title("Depression Prediction App")
 
