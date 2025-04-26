@@ -5,8 +5,8 @@ import os
 
 st.write("Current files:", os.listdir())
 # Load model locally
-with open('logistic_model.pkl', 'rb') as file:
-    logistic_model = pickle.load(file)
+with open('logistic_model.pkl', 'rb') as f:
+    logistic_model = pickle.load(f)
 
 st.title("Depression Prediction App")
 
