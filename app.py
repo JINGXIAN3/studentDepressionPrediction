@@ -3,7 +3,8 @@ import pickle
 import numpy as np
 
 # Load model locally
-
+with open('logistic_model.pkl', 'rb') as file:
+    logistic_model = pickle.load(file)
 
 st.title("Depression Prediction App")
 
