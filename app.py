@@ -3,7 +3,7 @@ import numpy as np
 import os
 
 # Load model locally
-logistic_model = joblib.load('logistic_model.joblib')  # <-- joblib load
+#logistic_model = joblib.load('logistic_model.joblib')  # <-- joblib load
 
 st.title("Depression Prediction App")
 
