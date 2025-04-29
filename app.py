@@ -21,6 +21,6 @@ if st.button('Predict Depression'):
     prediction = logistic_model.predict(input_data)
 
     if prediction[0] == 1:
-        st.error('Prediction: Likely Depression')
+        st.error('Prediction: Depression')
     else:
         st.success('Prediction: No Depression')
